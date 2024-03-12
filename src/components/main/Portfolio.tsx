@@ -4,27 +4,11 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const Portfolio = () => {
-    const [animate, setAnimate] = useState(false);
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        const revealThreshold = 700;
-
-        if (scrollPosition > revealThreshold) {
-            setAnimate(true);
-        } else {
-            setAnimate(false);
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
-
     return (
-        <div id="portfolio" className="flex border-b flex-col items-center py-20 px-4">
+        <div
+            id="portfolio"
+            className="flex border-b flex-col items-center py-20 px-4"
+        >
             <div className="lg:w-[1000px] flex flex-col gap-10">
                 <div className="flex flex-col gap-3">
                     <div className="bg-tertiary p-1 rounded-lg max-w-[70px]"></div>
@@ -35,21 +19,8 @@ const Portfolio = () => {
                 </div>
                 <div className="grid gap-10 place-content-center">
                     {projects.map((project, index) => (
-                        <motion.div
+                        <div
                             key={index}
-                            initial={{
-                                opacity: 0,
-                                x: project.animate === "left" ? -2000 : 2000,
-                            }}
-                            animate={{
-                                opacity: animate ? 1 : 0,
-                                x: animate
-                                    ? 0
-                                    : project.animate === "left"
-                                        ? -2000
-                                        : 2000,
-                            }}
-                            transition={{ duration: 2, type: "spring" }}
                             className={`rounded-xl p-10 gap-10 flex ${project.flex} max-md:flex-col-reverse max-w-[900px] shadow w-full justify-between gap-4 items-start`}
                         >
                             <div className="flex flex-col justify-between h-full gap-4 md:min-w-[400px]">
@@ -83,7 +54,7 @@ const Portfolio = () => {
                                     alt={project.title}
                                 />
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>
