@@ -1,7 +1,5 @@
 import { FaEye, FaGithub } from "react-icons/fa";
 import projects from "./Projects";
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
 const Portfolio = () => {
     return (
