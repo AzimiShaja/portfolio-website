@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply font-poppins scroll-smooth;
+}
+
+nav a {
+    @apply hover:font-bold font-light hover:scale-105 text-lg opacity-80 cursor-pointer duration-300 self-center  text-fourth;
+}
+nav .active {
+    @apply font-bold;
+}
+.social-links a {
+    @apply text-primary text-3xl hover:scale-125 duration-300;
+}
+.hero {
+  background-image: repeating-linear-gradient(0deg, #ffffff, #ffffff 9.5px, transparent 9.5px, transparent);
+  background-size: 10px 10px;
+  background-color: #e5e5e5;
+}
+
+.links a {
+    @apply hover:px-10 duration-300;
+}
+.skill {
+    @apply text-[50px] hover:scale-125 duration-300
+}
+.shadow {
+    box-shadow:
+        0px 0px 10px rgba(0, 0, 0, 0.1),
+        0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+form input {
+    @apply border border-gray-300 rounded-lg p-2 w-full
+}
+form textarea {
+    @apply border border-gray-300 max-h-[200px] min-h-[200px] rounded-lg p-2 w-full
+}
