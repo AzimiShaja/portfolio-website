@@ -63,10 +63,6 @@ const Contact = () => {
                             <MdEmail size={30} />
                             ahmad.shojaazimi@gmail.com
                         </h1>
-                        <h1 className="flex items-center gap-3">
-                            <MdPhone size={30} />
-                            +90 (0) 544 176 22
-                        </h1>
                         <div className="flex items-center gap-3 social-links">
                             <a href="https://twitter.com/AzimiShja">
                                 <FaXTwitter />
