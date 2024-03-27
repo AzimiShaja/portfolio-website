@@ -1,6 +1,6 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { MdEmail, MdPhone } from "react-icons/md";
+import { MdEmail,} from "react-icons/md";
 import { BsSend } from "react-icons/bs";
 import { useState } from "react";
 import { doc, setDoc } from "firebase/firestore";
